@@ -34,9 +34,9 @@ class GaussianFourierAttention(nn.Module):   ##GFAM
         return out
 
 
-class PyrmidFusionNet(nn.Module):
+class EAFM(nn.Module):
     def __init__(self, channels_high, channels_low, channel_out, classes=11):
-        super(PyrmidFusionNet, self).__init__()
+        super(EAFM, self).__init__()
 
         self.lateral_low = conv_block(channels_low, channels_high, 1, 1, bn_act=True, padding=0)
 
